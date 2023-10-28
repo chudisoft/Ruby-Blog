@@ -84,13 +84,6 @@ To get a local copy up and running, follow these steps.
 In order to run this project you need:
 
 
-### Install
-
-Clone this repository to your desired folder:
-
-```bundle install```
--
-
 
 ### Setup
 
@@ -101,6 +94,13 @@ Clone this repository to your desired folder:
   cd ruby-blog
   code .
 ```
+-
+
+### Install
+
+Clone this repository to your desired folder:
+
+```bundle install```
 -
 
 ### Usage
