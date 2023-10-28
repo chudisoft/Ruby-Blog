@@ -98,9 +98,11 @@ Clone this repository to your desired folder:
 
 ### Install
 
-Clone this repository to your desired folder:
+To install the project open terminal on this project's directory, execute the following command:
 
-```bundle install```
+```
+bundle install
+```
 -
 
 ### Usage
