@@ -117,7 +117,9 @@ To run the project open terminal on this project's directory, execute the follow
 ### Run tests
 
 To run the project open terminal on this project's directory, execute the following command:
-```bundle exec rspec```
+```
+bundle exec rspec
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
