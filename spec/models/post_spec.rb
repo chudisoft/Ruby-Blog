@@ -51,7 +51,7 @@ RSpec.describe Post do
     end
 
     it 'keeps track of posts and equals 9' do
-      expect(@author.posts_counter).to eq 17
+      expect(@author.posts_counter).to eq 9
     end
   end
 end
