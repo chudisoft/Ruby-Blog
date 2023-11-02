@@ -63,5 +63,4 @@ RSpec.describe 'Users', type: :request do
       expect(user.bio).to eq('Updated bio')
     end
   end
-
 end

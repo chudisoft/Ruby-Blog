@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Posts", type: :request do
+RSpec.describe 'Posts', type: :request do
   describe 'GET /users/:user_id/posts' do
     let(:user) { create(:user) }
     let!(:posts) { create_list(:post, 3, author: user) }
