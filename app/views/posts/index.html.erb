@@ -1,2 +1,45 @@
-<p>Here is a list of posts for given user</p>
-<!-- Your post listing HTML goes here -->
+<div class='container'>
+    <h1>All Posts</h1>
+    <div class='row mb-2 m-0 pt-2'>
+        <div class='col-md-1'>
+            <img src=<%= @user.photo %>
+                class='img-thumbnail' />
+        </div>
+        <div class='col-md-11 card pt-2'>
+            <div class='row justify-content-between'>
+                <h4 class='align-bottom'><%= @user.name %></h4>
+                <label class='align-bottom text-end'>Number of posts: <span><%= @user.posts_counter %></span></label>
+            </div>
+        </div>
+        <div class='col-md-12 card mt-2'>
+            <p><%= @user.bio %></p>
+        </div>
+    </div>
+    <ul class='table table-responsive table-hover p-0'>
+        <% @posts.each do |post| %>
+            <li class=''>
+                <h5 class='col-md-12'>
+                    <%= link_to post.title, user_post_path(@user, post) %>
+                </h5>
+                <p class='col-md-12 pt-2'>
+                    <%= post.text %>
+                </p>
+                <div class='col-md-12 pt-2'>
+                    <label class='me-2 text-end'>
+                        Comments: <span><%= post.comments_counter %></span>
+                    </label>
+                    <label class='text-end'>
+                        Likes: <span><%= post.likes_counter %></span>
+                    </label>
+                </div>
+                <div class='col-md-12 pt-2'>
+                    <label class=''>
+                        <% @posts.Comments.each do |post| %>
+                            Username: <span><%= post.comments_counter %></span>
+                        <% end %>
+                    </label>
+                </div>
+            </li>
+        <% end %>
+    </ul>
+</div>
