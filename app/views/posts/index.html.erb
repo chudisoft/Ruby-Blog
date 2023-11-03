@@ -18,26 +18,28 @@
     <ul class='table table-responsive table-hover p-0'>
         <% @posts.each do |post| %>
             <li class=''>
-                <h5 class='col-md-12'>
-                    <%= link_to post.title, user_post_path(@user, post) %>
-                </h5>
-                <p class='col-md-12 pt-2'>
-                    <%= post.text %>
-                </p>
-                <div class='col-md-12 pt-2'>
-                    <label class='me-2 text-end'>
-                        Comments: <span><%= post.comments_counter %></span>
-                    </label>
-                    <label class='text-end'>
-                        Likes: <span><%= post.likes_counter %></span>
-                    </label>
+                <div class='card mt-2'>
+                    <h5 class='col-md-12'>
+                        <%= link_to post.title, user_post_path(@user, post) %>
+                    </h5>
+                    <p class='col-md-12 pt-2'>
+                        <%= post.text %>
+                    </p>
+                    <div class='col-md-12 pt-2 text-end'>
+                        <label class='me-2'>
+                            Comments: <span><%= post.comments_counter %></span>
+                        </label>
+                        <label>
+                            Likes: <span><%= post.likes_counter %></span>
+                        </label>
+                    </div>
                 </div>
-                <div class='col-md-12 pt-2'>
-                    <label class=''>
-                        <% @posts.Comments.each do |post| %>
-                            Username: <span><%= post.comments_counter %></span>
-                        <% end %>
-                    </label>
+                <div class='col-md-12 card mt-2'>
+                    <% post.recent_comments.each do |comment| %>
+                        <div class=''>
+                            Username: <span><%= comment.user.name %></span>
+                        </div>
+                    <% end %>
                 </div>
             </li>
         <% end %>

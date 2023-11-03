@@ -1,3 +1,26 @@
-<p>Details of the post '<%= @post.title %>'</p>
-<p>Title: <%= @post.title %></p>
-<p>Text: <%= @post.text %></p>
+<div class='container'>
+    <h1>Post Details</h1>
+    <div class='row card mt-2 mb-2 m-0 pt-2'>
+        <h5 class='col-md-12'>
+            <%= link_to @post.title, user_post_path(@user, @post) %>
+        </h5>
+        <div class='col-md-12 pt-2 text-end'>
+            <label class='me-2'>
+                Comments: <span><%= @post.comments_counter %></span>
+            </label>
+            <label>
+                Likes: <span><%= @post.likes_counter %></span>
+            </label>
+        </div>
+        <p class='col-md-12 pt-2'>
+            <%= @post.text %>
+        </p>
+    </div>
+    <div class='col-md-12 card mt-2 p-2'>
+        <% @post.comments.each do |comment| %>
+            <div >
+                Username: <span><%= comment.user.name %></span>
+            </div>
+        <% end %>
+    </div>
+</div>
