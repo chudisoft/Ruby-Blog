@@ -19,7 +19,7 @@
     <div class='col-md-12 card mt-2 p-2'>
         <% @post.comments.each do |comment| %>
             <div >
-                Username: <span><%= comment.user.name %></span>
+                <%= comment.user.name %></span>: <span><%= comment.text %></span>
             </div>
         <% end %>
     </div>
