@@ -1,0 +1,12 @@
+<h2>Edit Post '<%= @post.title %>'</h2>
+<%= form_for [@user, @post] do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :text %>
+    <%= f.text_area :text %>
+  </div>
+  <%= f.submit 'Update Post' %>
+<% end %>
