@@ -1,0 +1,18 @@
+<div class='container'>
+    <div class='card col-md-4'>
+        <h1 class='card-header p-2 '>Add New Comment</h1>
+        <%= form_for [@user, @post, @comment] do |f| %>
+            <div class='card-body'>
+                <div class="form-group">
+                    <%= f.text_area :text, class: "form-control", placeholder: 'Add a comment...', rows: 3 %>
+                </div>
+            </div>
+            <div class='card-footer'>
+                <div class="actions">
+                    <%= f.submit 'Post Comment', class: 'btn btn-primary'%>
+                </div>
+                <%= link_to 'Back', user_post_path(@user, @post) %>
+            <div>
+        <% end %>
+    <div>
+<div>

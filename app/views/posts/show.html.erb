@@ -17,6 +17,7 @@
         </p>
         <div class='col-md-12 pt-2 text-end'>
             <%= link_to 'Like', user_post_like_path(@post), method: :post %>
+            <%= link_to 'New Comment', new_user_post_comment_path(@user, @post) %>
         </div>
     </div>
     <div class='col-md-12 card mt-2 p-2'>
